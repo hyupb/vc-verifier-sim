@@ -24,3 +24,12 @@
 - 한 일: 위협 모델 16개 작성(전제, 위협 표, 남는 위험), 3주차 vuln 실습 대상 4개(nonce 재사용, 폐기 API 인가, 이중 지급, SQL 인젝션) 확정
 - 막힌 점: 재발급하면 credential_id가 바뀌어 상품권을 두 번 받을 수 있는 문제 발견 → 사람별 고정 가명 subject_ref 추가 검토. 캡처 자체를 막을 수 있는지 고민 → 웹에선 불가능, 캡처해도 재사용 못 하게 하는 게 핵심이라고 정리
 - 내일 할 일: Dreamhack 웹 기초 문제 3개 (SQL 인젝션, 인증 관련) 풀고 풀이 메모
+
+
+## 2026-10-06 (1주차 6일차)
+- 한 일: Dreamhack 웹 기초 3문제 풀이 (cookie, session-basic, simple_sqli)
+  - cookie: 평문 쿠키 username=admin 위조로 인증 우회 → T1/T2 (서명 없는 값은 신뢰 안 함)
+  - session-basic: /admin 인가 검사 주석 처리로 세션 저장소 노출 → 세션 하이재킹 → T10 (관리자 API 인가)
+  - simple_sqli: userid에 admin"-- 입력해 비밀번호 조건 주석 처리 → T15 (파라미터 바인딩)
+- 막힌 점: 개발자 도구 Console 붙여넣기 차단(allow pasting), simple_sqli에서 res[0]가 첫 행이라 admin을 콕 집어야 했던 점
+- 내일 할 일: 1주차 설계 문서 재검토, "안 만들 것" 재확인, 2주차 계획 점검 (7일차 버퍼)
