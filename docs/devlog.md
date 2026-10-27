@@ -33,3 +33,9 @@
   - simple_sqli: userid에 admin"-- 입력해 비밀번호 조건 주석 처리 → T15 (파라미터 바인딩)
 - 막힌 점: 개발자 도구 Console 붙여넣기 차단(allow pasting), simple_sqli에서 res[0]가 첫 행이라 admin을 콕 집어야 했던 점
 - 내일 할 일: 1주차 설계 문서 재검토, "안 만들 것" 재확인, 2주차 계획 점검 (7일차 버퍼)
+
+
+## 2026-10-27 (1주차 7일차, 버퍼)
+- 한 일: 설계 문서 재검토, ERD 수정 5건을 research.md에 반영(폐기 1:0..1, verify_requests 컬럼 추가, audit_logs target_type, status_lists 신설, v 추가), 파생 항목(age_over_19, residence_city) 발급 항목에 추가, 소지자 키 저장 위치 모순 수정
+- 막힌 점: 재발급 시 상품권 이중 수령(subject_ref) 문제는 3주차 2일차에 적용하기로 보류
+- 내일 할 일: 2주차 1일차 Ed25519 키 생성 스크립트 (발급자/소지자 키 분리, .env는 git 제외)
